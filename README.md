@@ -23,13 +23,13 @@ the model is that the face shows that specific emotion.
  
 ``` json
 {
-  'angry': 0.16, 
-  'disgust': 0.0, 
-  'fear': 0.01, 
-  'happy': 0.29, 
-  'sad': 0.07, 
-  'surprise': 0.01, 
-  'neutral': 0.45
+  "angry": 0.16, 
+  "disgust": 0.0, 
+  "fear": 0.01, 
+  "happy": 0.29, 
+  "sad": 0.07, 
+  "surprise": 0.01, 
+  "neutral": 0.45
 }
 ```
 
