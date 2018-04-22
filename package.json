@@ -1,5 +1,5 @@
 {
-  "name": "Emotion",
+  "name": "Emotion Detection",
   "slug": "emotion",
   "keywords": "emotion classification computer vision face",
   "description": "Quickly determine the emotion on a face. Trained on tens of thousands of images.",
