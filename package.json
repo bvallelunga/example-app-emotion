@@ -1,0 +1,22 @@
+{
+  "name": "Emotion Detection",
+  "slug": "emotion",
+  "keywords": "emotion classification computer vision face",
+  "description": "Quickly determine the emotion on a face. Trained on tens of thousands of images.",
+  "main": "app/main.py",
+  "website": "https://github.com/oarriaga/face_classification",
+  "repository": "https://github.com/DopplerFoundation/example-app-emotion",
+  "input_scheme": {
+    "image": "string"
+  },
+  "output_scheme": {
+    "angry": "number",
+    "disgust": "number",
+    "fear": "number",
+    "happy": "number",
+    "sad": "number",
+    "surprise": "number",
+    "neutral": "number"
+  },
+  "license": "Apache License"
+}
