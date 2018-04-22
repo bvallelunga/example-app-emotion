@@ -5,7 +5,8 @@ collected by the Montreal Institute for Learning Algorithms.
 **Possible Use Cases**
   * Adding emotion classification to a face detection system
   * Targeted messaging to your users based on their emotional responses
-  * Measuring the emotional response of an audience during a movie
+  * Automated filter recommendations on image messaging apps like Instagram
+  * Smart tagging in photo gallery apps
 
 
 ## Input Scheme
