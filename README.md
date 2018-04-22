@@ -1,5 +1,6 @@
 # Emotion
-Quickly determine the emotion on a face. Trained on tens of thousands of images.
+Quickly determine the emotion on a face. Trained on tens of thousands of images
+collected by the Montreal Institute for Learning Algorithms.
 
 **Possible Use Cases**
   * Adding emotion classification to a face detection system
