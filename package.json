@@ -17,5 +17,17 @@
     "surprise": "number",
     "neutral": "number"
   },
+  "input_example": {
+    "image": "https://s3-us-west-1.amazonaws.com/doppler-production/production/public/gavin_belson.png"
+  },
+  "output_example": {
+    "angry": 0.36,
+    "disgust": 0.0,
+    "fear": 0.36,
+    "happy": 0.08,
+    "sad": 0.15,
+    "surprise": 0.01,
+    "neutral": 0.04
+  },
   "license": "Apache License"
 }
