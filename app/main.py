@@ -1,9 +1,11 @@
 import os
-import binascii
 
 import keras.models
 
 from .utils import base64_to_img
+from .utils import get_img
+from .utils import is_base64_str
+from .utils import is_img_url
 from .utils import preprocess
 
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
@@ -21,10 +23,12 @@ class ModelInterface(object):
     def predict(self, input):
         if 'image' not in input:
             raise KeyError("No key named 'image' in input.")
-        try:
+        if is_base64_str(input['image']):
             img = base64_to_img(input['image'])
-        except (binascii.Error, AttributeError):
-            raise ValueError("'image' must be a base64 encoded string.")
+        elif is_img_url(input['image']):
+            img = get_img(input['image'])
+        else:
+            raise ValueError("'image' must be a valid image url or a base64 encoded image.")
         min_dim = self.model.input_shape[1]
         if any(dim < min_dim for dim in img.size):
             raise ValueError("'image' can not have a height or width less than {} pixels.".format(min_dim))

@@ -46,6 +46,11 @@ class TestModelInterface(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.interface.predict({'image': '<'})
 
+    def test_image_is_not_url(self):
+        """'image' must be a valid image url."""
+        with self.assertRaises(ValueError):
+            self.interface.predict({'image': 'www.google.com'})
+
     def test_image_is_too_small(self):
         """'image' can not be smaller than the model's expected input size."""
         with self.assertRaises(ValueError):
