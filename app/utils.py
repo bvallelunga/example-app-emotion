@@ -1,5 +1,4 @@
 import base64
-import binascii
 from io import BytesIO
 
 import numpy as np
@@ -37,24 +36,6 @@ def base64_to_img(string):
     """Convert a base64 encoded string to an image."""
     img_buffer = BytesIO(base64.b64decode(string.encode(), validate=True))
     return Image.open(img_buffer)
-
-
-def is_base64_str(string):
-    """Check if the provided string is a valid base64 encoded image."""
-    try:
-        base64_to_img(string)
-        return True
-    except (binascii.Error, AttributeError):
-        return False
-
-
-def is_img_url(string):
-    """Check if the provided string is a valid image url."""
-    try:
-        Image.open(BytesIO(requests.get(string).content))
-        return True
-    except:
-        return False
 
 
 def get_img(url):
