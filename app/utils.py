@@ -2,6 +2,7 @@ import base64
 from io import BytesIO
 
 import numpy as np
+import requests
 from PIL import Image
 from keras.preprocessing.image import img_to_array
 
@@ -35,3 +36,8 @@ def base64_to_img(string):
     """Convert a base64 encoded string to an image."""
     img_buffer = BytesIO(base64.b64decode(string.encode(), validate=True))
     return Image.open(img_buffer)
+
+
+def get_img(url):
+    """Get the image at the provided url."""
+    return Image.open(BytesIO(requests.get(url).content))

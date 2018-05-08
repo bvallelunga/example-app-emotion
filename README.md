@@ -40,4 +40,9 @@ the model is that the face shows that specific emotion.
 The model was trained by the [B-IT-BOTS robotics team][1] on over 28,000 images. 
 
 
+## Want To Learn More?
+See the [MAINTAINERS.md][2] to learn more about the underlying model as well as how to contribute to the app.
+
+
 [1]: https://mas-group.inf.h-brs.de/?page_id=622
+[2]: https://github.com/DopplerFoundation/example-app-emotion/blob/master/MAINTAINERS.md
